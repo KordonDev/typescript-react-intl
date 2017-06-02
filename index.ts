@@ -87,7 +87,7 @@ function main(contents: string) {
     const emptyObject = o => JSON.stringify(o) === '{}'
     var res = elements.map(element => {
         var msg = {}
-        element.attributes.forEach((attr) => {
+        element.attributes.properties.forEach((attr) => {
             // found nothing
             if (!attr.name || !attr.initializer) return
             msg[attr.name.text] = attr.initializer.text || attr.initializer.expression.text
